@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+/auth/migrations/
+/kaaluleht/migrations/
+/db.sqlite3
+.gitignore
+.idea/
+Kaaluprojekt/__pycache__/
+auth/__pycache__/
+auth/migrations/
+db.sqlite3
+kaaluleht/__pycache__/
+kaaluleht/migrations/
