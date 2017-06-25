@@ -1,0 +1,24 @@
+{% block tabel %}
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th width="40%">Kasutaja</th>
+                    <th width="20%">Algne kaal</th>
+                    <th width="20%">Viimane kaal</th>
+                    <th width="20%">Protsent</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for kaal in kaalud %}
+                    <tr>
+                        <td><a href="{{ kaal.get_absolute_url }}">{{ kaal.nimi }}</a></td>
+                        <td>{{ kaal.alg_kaal }}</td>
+                        <td>{{ kaal.viimane_kaal }}</td>
+                        <td>{{ kaal.protsent }}%</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

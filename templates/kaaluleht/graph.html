@@ -1,0 +1,41 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: {{ labels|safe }},
+        datasets: [{
+            label: 'Kaal',
+            data: {{ data|safe }},
+            borderColor: 'rgb(255, 99, 132)',
+
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    suggestedMin:50,
+                    suggestedMax:120
+                }
+            }],
+            xAxes: [{
+                type:'time',
+                time: {
+                    displayFormats: {
+                       'millisecond': 'MMM DD',
+                       'second': 'MMM DD',
+                       'minute': 'MMM DD',
+                       'hour': 'MMM DD',
+                       'day': 'MMM DD',
+                       'week': 'MMM DD',
+                       'month': 'MMM DD',
+                       'quarter': 'MMM DD',
+                       'year': 'MMM DD'
+                    }}
+            }]
+        }
+    }
+});
+</script>
