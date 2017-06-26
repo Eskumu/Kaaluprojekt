@@ -16,7 +16,7 @@
             <tbody>
                 {% for kaal in kaalud %}
                     <tr>
-                        <td><a href="{{ kaal.get_absolute_url }}">{{ kaal.nimi.first_name }}</a></td>
+                        <td><a href="{{ kaal.get_absolute_url }}">{{ kaal.user.first_name }}</a></td>
                         <td>{{ kaal.alg_kaal }}</td>
                         <td>{{ kaal.viimane_kaal }}</td>
                         <td>{{ kaal.protsent }}</td>

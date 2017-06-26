@@ -20,12 +20,12 @@ class DashboardView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('dashboard')
 
     def form_valid(self, form):
-        form.instance.KaalID = Kaal.objects.get(nimi=self.request.user)
+        form.instance.KaalID = Kaal.objects.get(user=self.request.user)
         return super(DashboardView, self).form_valid(form)
 
     def get_context_data(self, **kwargs):
         context = super(DashboardView,self).get_context_data(**kwargs)
-        context["kaalud"] = Kaal.objects.order_by('nimi')
+        context["kaalud"] = Kaal.objects.order_by('user')
         return context
 
 

@@ -10,3 +10,4 @@ auth/migrations/
 db.sqlite3
 kaaluleht/__pycache__/
 kaaluleht/migrations/
+/conf.py
