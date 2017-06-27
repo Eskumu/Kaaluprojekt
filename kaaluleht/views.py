@@ -1,6 +1,7 @@
 import json
 
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView
@@ -14,10 +15,12 @@ from .forms import KaalForm
 def nullRedirect(request, *args, **kwargs):
     return redirect('/dashboard')
 
-class DashboardView(LoginRequiredMixin, CreateView):
+
+class DashboardView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Kaal_uuendus
     form_class = KaalForm
     success_url = reverse_lazy('dashboard')
+    success_message = "Kaal uuendatud"
 
     def form_valid(self, form):
         form.instance.KaalID = Kaal.objects.get(user=self.request.user)

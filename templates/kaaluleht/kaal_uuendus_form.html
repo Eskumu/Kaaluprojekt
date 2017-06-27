@@ -3,29 +3,41 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <div class="table-responsive">
-        <table class="table table-bordered table-striped table-hover">
-            <thead>
-                <tr>
-                    <th width="40%">Kasutaja</th>
-                    <th width="20%">Esimene kaal</th>
-                    <th width="20%">Kaal nüüd</th>
-                    <th width="20%">%</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for kaal in kaalud %}
-                    <tr>
-                        <td><a href="{{ kaal.get_absolute_url }}">{{ kaal.user.first_name }}</a></td>
-                        <td>{{ kaal.alg_kaal }}</td>
-                        <td>{{ kaal.viimane_kaal }}</td>
-                        <td>{{ kaal.protsent }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
     <div class="row">
+
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == "success" %}
+                    <div class="alert alert-success col-sm-offset-2 col-sm-8" role="alert">
+                        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> {{ message }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+        <div class="table-responsive col-sm-offset-2 col-sm-8">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th width="40%">Kasutaja</th>
+                        <th width="20%">Esimene kaal</th>
+                        <th width="20%">Kaal nüüd</th>
+                        <th width="20%">%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for kaal in kaalud %}
+                        <tr>
+                            <td><a href="{{ kaal.get_absolute_url }}">{{ kaal.user.first_name }}</a></td>
+                            <td>{{ kaal.alg_kaal }}</td>
+                            <td>{{ kaal.viimane_kaal }}</td>
+                            <td>{{ kaal.protsent }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
         <div class="col-sm-offset-2 col-sm-8">
             {% crispy form %}
         </div>
