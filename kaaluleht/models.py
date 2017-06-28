@@ -35,6 +35,13 @@ class Kaal(models.Model):
             return self.alg_kaal
 
     @property
+    def kaotatud(self):
+        try:
+            return self.viimane_kaal-self.alg_kaal
+        except TypeError:
+            return None
+
+    @property
     def protsent(self):
         try:
             return round((1-self.alg_kaal/self.viimane_kaal)*100,2)

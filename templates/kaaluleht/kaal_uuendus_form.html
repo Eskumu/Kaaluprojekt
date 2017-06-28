@@ -19,10 +19,11 @@
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
-                        <th width="40%">Kasutaja</th>
-                        <th width="20%">Esimene kaal</th>
-                        <th width="20%">Kaal nüüd</th>
-                        <th width="20%">%</th>
+                        <th >Kasutaja</th>
+                        <th width="15%">Esimene kaal</th>
+                        <th width="15%">Kaal nüüd</th>
+                        <th width="15%">Kaotatud</th>
+                        <th width="15%" class="hidden-xs">%</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,6 +33,7 @@
                             <td>{{ kaal.alg_kaal }}</td>
                             <td>{{ kaal.viimane_kaal }}</td>
                             <td>{{ kaal.protsent }}</td>
+                            <td class="hidden-xs">{{ kaal.protsent }} %</td>
                         </tr>
                     {% endfor %}
                 </tbody>
