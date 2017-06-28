@@ -28,6 +28,7 @@
                 </thead>
                 <tbody>
                     {% for kaal in kaalud %}
+                        {% if not kaal.alg_kaal == None %}
                         <tr>
                             <td><a href="{{ kaal.get_absolute_url }}">{{ kaal.user.first_name }}</a></td>
                             <td>{{ kaal.alg_kaal }}</td>
@@ -35,6 +36,7 @@
                             <td>{{ kaal.kaotatud }}</td>
                             <td class="hidden-xs">{{ kaal.protsent }} %</td>
                         </tr>
+                        {% endif %}
                     {% endfor %}
                 </tbody>
             </table>
