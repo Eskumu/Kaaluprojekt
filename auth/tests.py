@@ -7,12 +7,13 @@ class AuthenticationTestCase(TestCase):
     def setUp(self):
         super().setUp()
 
-        self.username = 'Thorgate'
-        self.password = 'thorgate123'
+        self.username = 'Username'
+        self.password = 'TestCase12'
+        self.email = 'email@gmail.com'
 
         self.authenticated_user = User.objects.create_user(
             username=self.username,
-            email='info@throgate.eu',
+            email=self.email,
             password=self.password,
         )
 
