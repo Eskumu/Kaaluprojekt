@@ -17,8 +17,8 @@ var myChart = new Chart(ctx, {
         scales: {
             yAxes: [{
                 ticks: {
-                    suggestedMin:50,
-                    suggestedMax:120
+                    suggestedMin: {{ chart_min }},
+                    suggestedMax: {{ chart_max }}
                 }
             }],
             xAxes: [{

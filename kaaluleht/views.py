@@ -48,9 +48,14 @@ class DetailView(LoginRequiredMixin,ListView):
         data = json.dumps(list(data_raw),cls=DjangoJSONEncoder)
         labels = json.dumps(list(labels_raw),cls=DjangoJSONEncoder)
 
+        chart_padding = 5
+        print("Min_raw"+str(min(data_raw)), "Min"+ str(min(data)))
+
         graafik = {
             'labels': labels,
-            'data': data
+            'data': data,
+            'chart_min': min(data_raw) - chart_padding,
+            'chart_max': max(data_raw) + chart_padding
         }
         context['graafik'] = graafik
         return context
