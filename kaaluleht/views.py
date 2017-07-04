@@ -49,7 +49,6 @@ class DetailView(LoginRequiredMixin,ListView):
         labels = json.dumps(list(labels_raw),cls=DjangoJSONEncoder)
 
         chart_padding = 5
-        print("Min_raw"+str(min(data_raw)), "Min"+ str(min(data)))
 
         graafik = {
             'labels': labels,
