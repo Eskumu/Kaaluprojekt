@@ -2,18 +2,15 @@ import json
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib import messages
 from django.urls import reverse_lazy
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView
 from django.core.serializers.json import DjangoJSONEncoder
-from django.shortcuts import redirect
 
 from .models import Kaal, Kaal_uuendus
 from .forms import KaalForm
 # Create your views here.
-
-def nullRedirect(request, *args, **kwargs):
-    return redirect('/dashboard')
 
 
 class DashboardView(LoginRequiredMixin, SuccessMessageMixin, CreateView):

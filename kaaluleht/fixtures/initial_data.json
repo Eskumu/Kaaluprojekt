@@ -1,0 +1,91 @@
+[
+{
+  "model": "kaaluleht.kaal_uuendus",
+  "pk": 1,
+  "fields": {
+    "KaalID": 1,
+    "change_date": "2017-06-26",
+    "kaal": "80.0"
+  }
+},
+{
+  "model": "kaaluleht.kaal_uuendus",
+  "pk": 2,
+  "fields": {
+    "KaalID": 1,
+    "change_date": "2017-06-27",
+    "kaal": "50.0"
+  }
+},
+{
+  "model": "kaaluleht.kaal_uuendus",
+  "pk": 3,
+  "fields": {
+    "KaalID": 1,
+    "change_date": "2017-06-29",
+    "kaal": "100.0"
+  }
+},
+{
+  "model": "kaaluleht.kaal_uuendus",
+  "pk": 4,
+  "fields": {
+    "KaalID": 1,
+    "change_date": "2017-06-28",
+    "kaal": "102.0"
+  }
+},
+{
+  "model": "kaaluleht.kaal_uuendus",
+  "pk": 5,
+  "fields": {
+    "KaalID": 1,
+    "change_date": "2017-06-27",
+    "kaal": "100.0"
+  }
+},
+{
+  "model": "kaaluleht.kaal_uuendus",
+  "pk": 6,
+  "fields": {
+    "KaalID": 1,
+    "change_date": "2017-06-27",
+    "kaal": "100.0"
+  }
+},
+{
+  "model": "kaaluleht.kaal_uuendus",
+  "pk": 8,
+  "fields": {
+    "KaalID": 1,
+    "change_date": "2017-07-18",
+    "kaal": "50.0"
+  }
+},
+{
+  "model": "kaaluleht.kaal_uuendus",
+  "pk": 10,
+  "fields": {
+    "KaalID": 1,
+    "change_date": "2017-06-29",
+    "kaal": "80.0"
+  }
+},
+{
+  "model": "kaaluleht.kaal_uuendus",
+  "pk": 11,
+  "fields": {
+    "KaalID": 2,
+    "change_date": "2017-06-30",
+    "kaal": "50.0"
+  }
+},
+{
+  "model": "kaaluleht.kaal_uuendus",
+  "pk": 12,
+  "fields": {
+    "KaalID": 2,
+    "change_date": "2017-07-26",
+    "kaal": "50.0"
+  }
+}]

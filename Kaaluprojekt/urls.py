@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
+    url(r'^$', RedirectView.as_view(url='/dashboard/')),
     url(r'', include('auth.urls')),
     url(r'', include('kaaluleht.urls')),
     url(r'^admin/', admin.site.urls),

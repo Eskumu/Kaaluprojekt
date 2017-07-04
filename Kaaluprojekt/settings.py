@@ -117,7 +117,7 @@ LOGIN_URL = 'login'
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EET'
 
 USE_I18N = True
 
@@ -131,6 +131,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
 # Crispy forms
 # http://django-crispy-forms.readthedocs.io/
 
