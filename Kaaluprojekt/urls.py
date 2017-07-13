@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^$', RedirectView.as_view(url='/dashboard/')),
     url(r'', include('auth.urls')),
     url(r'', include('kaaluleht.urls')),
+    url(r'', include('fit_notes.urls')),
     url(r'^admin/', admin.site.urls),
 ]

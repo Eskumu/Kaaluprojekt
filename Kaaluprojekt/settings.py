@@ -33,6 +33,7 @@ ALLOWED_HOSTS = conf.ALLOWED_HOSTS
 
 INSTALLED_APPS = [
     'kaaluleht',
+    'fit_notes',
 
     'crispy_forms',
 

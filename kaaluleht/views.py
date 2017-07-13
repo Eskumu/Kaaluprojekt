@@ -18,6 +18,7 @@ class DashboardView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = KaalForm
     success_url = reverse_lazy('dashboard')
     success_message = "Kaal uuendatud"
+    template_name = 'kaaluleht/dashboard.html'
 
     def form_valid(self, form):
         form.instance.KaalID = Kaal.objects.get(user=self.request.user)
