@@ -1,0 +1,8 @@
+<div {% if widget.class %} class="{{widget.class}}" {% endif %}{% if widget.id %} id="{{widget.id}}" {% endif %}>
+    <div class="input-group ">
+    {% include "django/forms/widgets/input.html" %}
+    {% if widget.group_addon %}
+        <span class="input-group-addon">{{widget.group_addon}}</span>
+    {% endif %}
+    </div>
+</div>
